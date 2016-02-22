@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+}
+h1 {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-top: 250px;
+  font-size: 150px
+}
+pre {
+  color: white;
+  margin-top: -220px;
+  text-align: center;
+  letter-spacing: -14px;
+  font-family: 'Changa One', sans-serif;
+  font-size: 100px;
+  padding-top: 30px;
+}
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  margin-top: 450px;
+  text-align: left;
+  font-size: 40px
+
+
+}

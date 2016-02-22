@@ -1,0 +1,54 @@
+if (annyang) {
+   //Let's define our first command. First the text we expect, and then the function it should call
+    var commands = {
+      'hello': function() {
+        $('h1').html("Hello!");
+
+
+      },
+      'Hey Jarvis': function(){
+        $('h1').html("Yes Sir?");
+      },
+      'say hi to *name': function(name) {
+        $('h1').html("Hi "+name);
+      },
+      'Say hello to Dad': function(){
+        $('h1').html("Hello Father!");
+      },
+      'What is the date today': function(){
+        var currentDate = new Date();
+        var day = currentDate.getDate();
+        var month = currentDate.getMonth() + 1;
+        var year = currentDate.getFullYear();
+        $('h1').html(day+'/'+month+'/'+year);
+      },
+      'who are you': function(){
+        $('h1').html("I am Jarvis");
+      },
+      'What\'s the date today': date,
+      'who made you': function(){
+        $('h1').html("Harry Whitehead");
+      },
+  //    'What\'s *num1 plus *num2': function(num1, num2){
+    //    $('h1').html("The answer is" + num1 + num2);
+ //   }
+
+    };
+    
+ 
+    function date(){
+      var currentDate = new Date();
+      var day = currentDate.getDate();
+      var month = currentDate.getMonth() + 1;
+      var year = currentDate.getFullYear();
+      $('h1').html(day+'/'+month+'/'+year);
+
+    }
+
+    //Add our commands to annyang
+    annyang.addCommands(commands);
+    annyang.debug();
+
+     //Start listening. You can call this here, or attach this call to an event, button, etc.
+    annyang.start();
+  }
