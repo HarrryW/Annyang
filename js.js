@@ -29,9 +29,9 @@ if (annyang) {
       'who made you': function(){
         $('h1').html("Harry Whitehead");
       },
-  //    'What\'s *num1 plus *num2': function(num1, num2){
-    //    $('h1').html("The answer is" + num1 + num2);
- //   }
+    'What\'s :num1 plus :num2': plus,
+    'What\'s :num1 to the power of :num2': powerOf,
+    'What\'s :num1 times :num2': times
 
     };
     
@@ -52,3 +52,13 @@ if (annyang) {
      //Start listening. You can call this here, or attach this call to an event, button, etc.
     annyang.start();
   }
+function plus(num1, num2){
+        $('h1').html("The answer is" + (num1 + num2));
+}
+function times (num1, num2){
+        $('h1').html("The answer is" + (num1 * num2));
+}
+function powerOf(num1, num2){
+        var total = pow(num1, num2);
+        $('h1').html("The answer is" + total);
+}
