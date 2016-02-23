@@ -58,7 +58,8 @@ function plus(num1, num2){
         $('h1').html(total);
 }
 function times (num1, num2){
-        var total = num1 * num2;
+                
+        var total = parseInt(num1) * parseInt(num2);
         $('h1').html(total);
 }
 function powerOf(num1, num2){
