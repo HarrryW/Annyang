@@ -29,7 +29,7 @@ if (annyang) {
       'who made you': function(){
         $('h1').html("Harry Whitehead");
       },
-    'What\'s :num1 plus :num2': plus,
+    'What\'s :num1 + :num2': plus,
     'What\'s :num1 to the power of :num2': powerOf,
     'What\'s :num1 times :num2': times
 
@@ -53,12 +53,15 @@ if (annyang) {
     annyang.start();
   }
 function plus(num1, num2){
-        $('h1').html("The answer is" + (num1 + num2));
+        
+        var total = parseInt(num1) + parseInt(num2);
+        $('h1').html(total);
 }
 function times (num1, num2){
-        $('h1').html("The answer is" + (num1 * num2));
+        var total = num1 * num2;
+        $('h1').html(total);
 }
 function powerOf(num1, num2){
-        var total = pow(num1, num2);
-        $('h1').html("The answer is" + total);
+        var total = Math.pow(num1, num2);
+        $('h1').html(total);
 }
