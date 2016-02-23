@@ -23,10 +23,10 @@ if (annyang) {
       'who made you': function(){
         $('h1').html("Harry Whitehead");
       },
-    'What\'s :num1 + :num2': plus,
-    'What\'s :num1 to the power of :num2': powerOf,
-    'What\'s :num1 times :num2': times,
-    'What\'s :num1 divided by :num2': divedBy
+      'What\'s :num1 + :num2': plus,
+      'What\'s :num1 to the power of :num2': powerOf,
+      'What\'s :num1 times :num2': times,
+      'What\'s :num1 divided by :num2': divedBy
 
     };
 
