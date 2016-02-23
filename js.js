@@ -45,6 +45,8 @@ if (annyang) {
      //Start listening. You can call this here, or attach this call to an event, button, etc.
     annyang.start();
   }
+
+//Functions here
 function plus(num1, num2){
 
         var total = parseInt(num1) + parseInt(num2);
@@ -58,13 +60,6 @@ function powerOf(num1, num2){
         var total = Math.pow(num1, num2);
         $('h1').html(total);
 }
-
-
-
-
-
-
-
 function date(){
   var currentDate = new Date();
   var day = currentDate.getDate();
