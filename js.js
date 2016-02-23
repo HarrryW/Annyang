@@ -25,7 +25,8 @@ if (annyang) {
       },
     'What\'s :num1 + :num2': plus,
     'What\'s :num1 to the power of :num2': powerOf,
-    'What\'s :num1 times :num2': times
+    'What\'s :num1 times :num2': times,
+    'What\'s :num1 divided by :num2': divedBy
 
     };
 
@@ -41,6 +42,12 @@ if (annyang) {
 function plus(num1, num2){
 
         var total = parseInt(num1) + parseInt(num2);
+        $('h1').html(total);
+}
+
+function divedBy(num1, num2){
+
+        var total = parseInt(num1) / parseInt(num2);
         $('h1').html(total);
 }
 function times (num1, num2){
