@@ -15,13 +15,7 @@ if (annyang) {
       'Say hello to Dad': function(){
         $('h1').html("Hello Father!");
       },
-      'What is the date today': function(){
-        var currentDate = new Date();
-        var day = currentDate.getDate();
-        var month = currentDate.getMonth() + 1;
-        var year = currentDate.getFullYear();
-        $('h1').html(day+'/'+month+'/'+year);
-      },
+      'What is the date today': date,
       'who are you': function(){
         $('h1').html("I am Jarvis");
       },
