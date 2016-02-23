@@ -32,14 +32,11 @@ if (annyang) {
 
 
 
-    //Add our commands to annyang
     annyang.addCommands(commands);
     annyang.debug();
-
-     //Start listening. You can call this here, or attach this call to an event, button, etc.
+    //Get annyang started listening to things recording/inputed by the mic
     annyang.start();
-  }
-
+}
 //Functions here
 function plus(num1, num2){
 
