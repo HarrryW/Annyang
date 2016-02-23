@@ -34,16 +34,9 @@ if (annyang) {
     'What\'s :num1 times :num2': times
 
     };
-    
- 
-    function date(){
-      var currentDate = new Date();
-      var day = currentDate.getDate();
-      var month = currentDate.getMonth() + 1;
-      var year = currentDate.getFullYear();
-      $('h1').html(day+'/'+month+'/'+year);
 
-    }
+
+
 
     //Add our commands to annyang
     annyang.addCommands(commands);
@@ -53,16 +46,30 @@ if (annyang) {
     annyang.start();
   }
 function plus(num1, num2){
-        
+
         var total = parseInt(num1) + parseInt(num2);
         $('h1').html(total);
 }
 function times (num1, num2){
-                
         var total = parseInt(num1) * parseInt(num2);
         $('h1').html(total);
 }
 function powerOf(num1, num2){
         var total = Math.pow(num1, num2);
         $('h1').html(total);
+}
+
+
+
+
+
+
+
+function date(){
+  var currentDate = new Date();
+  var day = currentDate.getDate();
+  var month = currentDate.getMonth() + 1;
+  var year = currentDate.getFullYear();
+  $('h1').html(day+'/'+month+'/'+year);
+
 }
