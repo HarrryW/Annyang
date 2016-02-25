@@ -25,6 +25,7 @@ if (annyang) {
       },
       '(What\'s) :num1 + :num2': plus,
       '(What\'s) :num1 to the power of :num2': powerOf,
+      '(What\'s) :num1 ^ :num2': powerOf,
       '(What\'s) :num1 times :num2': times,
       '(What\'s) :num1 divided by :num2': divedBy,
       '(What\'s the) square root of :num1': squareRoot,
@@ -45,32 +46,39 @@ function plus(num1, num2){
 
         var total = parseInt(num1) + parseInt(num2);
         $('h1').html(total);
+        console.log(total);
 }
 
 function divedBy(num1, num2){
 
         var total = parseInt(num1) / parseInt(num2);
         $('h1').html(total);
+        console.log(total);
 }
 function times (num1, num2){
         var total = parseInt(num1) * parseInt(num2);
         $('h1').html(total);
+        console.log(total);
 }
 function powerOf(num1, num2){
         var total = Math.pow(num1, num2);
         $('h1').html(total);
+        console.log(total);
 }
 function squareRoot(num1){
         var total = Math.pow(num1, 0.5);
         $('h1').html(total);
+        console.log(total);
 }
 function cubeRoot(num1){
         var total = Math.cbrt(num1);
         $('h1').html(total);
+        console.log(total);
 }
 function otherRoots(rootNumber, num1){
     var total = Math.pow(parseInt(num1), 1/rootNumber);
     $('h1').html(total);
+    console.log(total);
 }
 
 
