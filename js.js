@@ -28,8 +28,8 @@ if (annyang) {
       'What\'s :num1 times :num2': times,
       'What\'s :num1 divided by :num2': divedBy,
       'What\'s the square root of :num1': squareRoot,
-      'What\'s the cube root of :num1': cubeRoot
-
+      'What\'s the cube root of :num1': cubeRoot,
+      'What\'s the :rootNumber root of :num1': otherRoots
     };
 
 
@@ -67,6 +67,10 @@ function squareRoot(num1){
 function cubeRoot(num1){
         var total = Math.cbrt(num1);
         $('h1').html(total);
+}
+function otherRoots(rootNumber, num1){
+    var total = Math.pow(num1, 1/rootNumber);
+    $('h1').html(total);
 }
 
 
