@@ -26,7 +26,8 @@ if (annyang) {
       'What\'s :num1 + :num2': plus,
       'What\'s :num1 to the power of :num2': powerOf,
       'What\'s :num1 times :num2': times,
-      'What\'s :num1 divided by :num2': divedBy
+      'What\'s :num1 divided by :num2': divedBy,
+      'What\'s the square root of :num1': squareRoot
 
     };
 
@@ -58,6 +59,12 @@ function powerOf(num1, num2){
         var total = Math.pow(num1, num2);
         $('h1').html(total);
 }
+function squareRoot(num1){
+        var total = Math.pow(num1, 0.5);
+        $('h1').html(total);
+}
+
+
 function date(){
   var currentDate = new Date();
   var day = currentDate.getDate();
