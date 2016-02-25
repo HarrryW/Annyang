@@ -27,7 +27,8 @@ if (annyang) {
       'What\'s :num1 to the power of :num2': powerOf,
       'What\'s :num1 times :num2': times,
       'What\'s :num1 divided by :num2': divedBy,
-      'What\'s the square root of :num1': squareRoot
+      'What\'s the square root of :num1': squareRoot,
+      'What\'s the cube root of :num1': cubeRoot
 
     };
 
@@ -61,6 +62,10 @@ function powerOf(num1, num2){
 }
 function squareRoot(num1){
         var total = Math.pow(num1, 0.5);
+        $('h1').html(total);
+}
+function cubeRoot(num1){
+        var total = Math.cbrt(num1);
         $('h1').html(total);
 }
 
