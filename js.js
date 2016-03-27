@@ -30,7 +30,8 @@ if (annyang) {
       '(What\'s) :num1 divided by :num2': divedBy,
       '(What\'s the) square root of :num1': squareRoot,
       '(What\'s the) cube root of :num1': cubeRoot,
-      ':rootNumber index :num1': otherRoots
+      ':rootNumber index :num1': otherRoots,
+      'Return to the main page': release
     };
 
 
@@ -47,6 +48,10 @@ function plus(num1, num2){
         var total = parseInt(num1) + parseInt(num2);
         $('h1').html(total);
         console.log(total);
+}
+function release(){
+  //Return to the main page.
+  window.location.href = "http://vaporz.groklinux.com/index.html";
 }
 
 function divedBy(num1, num2){
