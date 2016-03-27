@@ -31,7 +31,8 @@ if (annyang) {
       '(What\'s the) square root of :num1': squareRoot,
       '(What\'s the) cube root of :num1': cubeRoot,
       ':rootNumber index :num1': otherRoots,
-      'Return to the main page': release
+      'Return to the main page': release,
+      'Open my email': mailTo
     };
 
 
@@ -53,7 +54,9 @@ function release(){
   //Return to the main page.
   window.location.href = "http://vaporz.groklinux.com/index.html";
 }
-
+function mailTo(){
+  window.location.href = "https://mail.google.com";
+}
 function divedBy(num1, num2){
 
         var total = parseInt(num1) / parseInt(num2);
