@@ -23,12 +23,14 @@ if (annyang) {
       'who made you': function(){
         $('h1').html("Harry Whitehead");
       },
+
       'Say something(I\'m giving up on you)': function(){
         speak("Sure thing");
       },
       'What is love': function(){
         speak("Baby don't hurt me.... don't hurt me.... no more");
       },
+
       '(What\'s) :num1 + :num2': plus,
       '(What\'s) :num1 to the power of :num2': powerOf,
       '(What\'s) :num1 ^ :num2': powerOf,
@@ -96,9 +98,10 @@ function otherRoots(rootNumber, num1){
     $('h1').html(total);
     console.log(total);
 }
-function searchWikipedia(question){
+function searchWikipedia(term){
   console.log("Showing results for " + term);
-  $('h1').html("<iframe width='1000' height='2000'src=' https://en.wikipedia.org/w/index.php?search='+term></iframe>");
+  $('h1').html("<iframe width='1000' height='2000'src='https://en.wikipedia.org/w/index.php?search="+term+"'></iframe>");
+  //window.location.href='https://en.wikipedia.org/w/index.php?search='+term;
 }
 
 function date(){
