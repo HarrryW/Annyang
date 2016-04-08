@@ -39,7 +39,8 @@ if (annyang) {
       ':rootNumber index :num1': otherRoots,
       'Return to the main page': release,
       'Open my email': mailTo,
-      'What\'s the day today': getDay
+      'What\'s the day today': getDay,
+      'Search Wikipedia for *term': searchWikipedia
     };
 
 
@@ -95,7 +96,10 @@ function otherRoots(rootNumber, num1){
     $('h1').html(total);
     console.log(total);
 }
-
+function searchWikipedia(question){
+  console.log("Showing results for " + term);
+  $('h1').html("<iframe width='1000' height='2000'src=' https://en.wikipedia.org/w/index.php?search='+term></iframe>");
+}
 
 function date(){
   var currentDate = new Date();
