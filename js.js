@@ -23,6 +23,9 @@ if (annyang) {
       'who made you': function(){
         $('h1').html("Harry Whitehead");
       },
+      'Say something': function(){
+        speak("Sure thing");
+      },
       '(What\'s) :num1 + :num2': plus,
       '(What\'s) :num1 to the power of :num2': powerOf,
       '(What\'s) :num1 ^ :num2': powerOf,
@@ -32,7 +35,8 @@ if (annyang) {
       '(What\'s the) cube root of :num1': cubeRoot,
       ':rootNumber index :num1': otherRoots,
       'Return to the main page': release,
-      'Open my email': mailTo
+      'Open my email': mailTo,
+      'What\'s the day today': getDay
     };
 
 
@@ -97,4 +101,17 @@ function date(){
   var year = currentDate.getFullYear();
   $('h1').html(day+'/'+month+'/'+year);
 
+}
+function getDay(){
+  var d = new Date();
+  var weekday = new Array(7);
+  weekday[0]=  "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  var n = weekday[d.getDay()];
+  $('h1').html(n);
 }
