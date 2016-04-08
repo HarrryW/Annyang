@@ -42,7 +42,8 @@ if (annyang) {
       'Return to the main page': release,
       'Open my email': mailTo,
       'What\'s the day today': getDay,
-      'Search Wikipedia for *term': searchWikipedia
+      'Search Wikipedia for *term': searchWikipedia,
+    //  'Search Google for *term': searchGoogle
     };
 
 
@@ -101,9 +102,14 @@ function otherRoots(rootNumber, num1){
 function searchWikipedia(term){
   console.log("Showing results for " + term);
   $('h1').html("<iframe width='1000' height='2000'src='https://en.wikipedia.org/w/index.php?search="+term+"'></iframe>");
-  //window.location.href='https://en.wikipedia.org/w/index.php?search='+term;
 }
+/*
+function searchGoogle(term){
+  console.log("Showing results for " + term);
+  window.location.href='https://google.com/search?q='+term;
 
+}
+*/
 function date(){
   var currentDate = new Date();
   var day = currentDate.getDate();
