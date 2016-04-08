@@ -23,8 +23,11 @@ if (annyang) {
       'who made you': function(){
         $('h1').html("Harry Whitehead");
       },
-      'Say something': function(){
+      'Say something(I\'m giving up on you)': function(){
         speak("Sure thing");
+      },
+      'What is love': function(){
+        speak("Baby don't hurt me.... don't hurt me.... no more");
       },
       '(What\'s) :num1 + :num2': plus,
       '(What\'s) :num1 to the power of :num2': powerOf,
