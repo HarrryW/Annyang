@@ -43,7 +43,9 @@ if (annyang) {
       'Open my email': mailTo,
       'What\'s the day today': getDay,
       'Search Wikipedia for *term': searchWikipedia,
-    //  'Search Google for *term': searchGoogle
+      'Search Google for *term': searchGoogle,
+      'What month is it': getMonth,
+      "Search for *term": searchFor
     };
 
 
@@ -108,6 +110,7 @@ function searchGoogle(term){
   window.location.href='https://google.com/search?q='+term;
 
 }
+
 function searchFor(term){
     console.log("Showing the search results for " + term);
     $('h1').html("<iframe width=1000 height=2000 src='https://duckduckgo.com/?q="+term+"'></iframe>")
@@ -131,5 +134,23 @@ function getDay(){
   weekday[5] = "Friday";
   weekday[6] = "Saturday";
   var n = weekday[d.getDay()];
+  $('h1').html(n);
+}
+function getMonth(){
+  var d = new Date();
+  var Month = new Array(12);
+  Month[0]=  "January";
+  Month[1] = "February";
+  Month[2] = "March";
+  Month[3] = "April";
+  Month[4] = "May";
+  Month[5] = "June";
+  Month[6] = "July";
+  Month[7] = 'August';
+  Month[8] = 'September'
+  Month[9] = 'October';
+  Month[10] = 'November';
+  Month[11] = 'December';
+  var n = Month[d.getMonth()];
   $('h1').html(n);
 }
