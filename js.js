@@ -62,8 +62,7 @@ function plus(num1, num2){
         console.log(total);
 }
 function release(){
-  //Return to the main page.
-  window.location.href = "http://vaporz.groklinux.com/index.html";
+     window.location.href = "http://vaporz.groklinux.com/index.html";
 }
 function mailTo(){
   window.location.href = "https://mail.google.com";
@@ -103,13 +102,16 @@ function searchWikipedia(term){
   console.log("Showing results for " + term);
   $('h1').html("<iframe width='1000' height='2000'src='https://en.wikipedia.org/w/index.php?search="+term+"'></iframe>");
 }
-/*
+
 function searchGoogle(term){
   console.log("Showing results for " + term);
   window.location.href='https://google.com/search?q='+term;
 
 }
-*/
+function searchFor(term){
+    console.log("Showing the search results for " + term);
+    $('h1').html("<iframe width=1000 height=2000 src='https://duckduckgo.com/?q="+term+"'></iframe>")
+}
 function date(){
   var currentDate = new Date();
   var day = currentDate.getDate();
