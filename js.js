@@ -45,7 +45,9 @@ if (annyang) {
       'Search Wikipedia for *term': searchWikipedia,
       'Search Google for *term': searchGoogle,
       'What month is it': getMonth,
-      "Search for *term": searchFor
+      "Search for *term": searchFor,
+      "Search Youtube for *term": searchYoutube
+
     };
 
 
@@ -63,12 +65,7 @@ function plus(num1, num2){
         $('h1').html(total);
         console.log(total);
 }
-function release(){
-     window.location.href = "http://vaporz.groklinux.com/index.html";
-}
-function mailTo(){
-  window.location.href = "https://mail.google.com";
-}
+
 function divedBy(num1, num2){
 
         var total = parseInt(num1) / parseInt(num2);
@@ -100,6 +97,13 @@ function otherRoots(rootNumber, num1){
     $('h1').html(total);
     console.log(total);
 }
+//All web searching functions here
+function release(){
+     window.location.href = "http://vaporz.groklinux.com/index.html";
+}
+function mailTo(){
+  window.location.href = "https://mail.google.com";
+}
 function searchWikipedia(term){
   console.log("Showing results for " + term);
   $('h1').html("<iframe width='1000' height='2000'src='https://en.wikipedia.org/w/index.php?search="+term+"'></iframe>");
@@ -110,11 +114,15 @@ function searchGoogle(term){
   window.location.href='https://google.com/search?q='+term;
 
 }
-
 function searchFor(term){
     console.log("Showing the search results for " + term);
-    $('h1').html("<iframe width=1000 height=2000 src='https://duckduckgo.com/?q="+term+"'></iframe>")
+    $('h1').html("<iframe width=1000 height=2000 src='https://duckduckgo.com/?q="+term+"'></iframe>");
 }
+function searchYoutube(term){
+  console.log("Showing Youtube results for " + term);
+  window.location.href='https://www.youtube.com/results?search_query='+term;
+}
+//Date Showing functions here
 function date(){
   var currentDate = new Date();
   var day = currentDate.getDate();
