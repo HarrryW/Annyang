@@ -120,7 +120,9 @@ function searchFor(term){
 }
 function searchYoutube(term){
   console.log("Showing Youtube results for " + term);
+  term = term.split(' ').join('+');
   window.location.href='https://www.youtube.com/results?search_query='+term;
+
 }
 //Date Showing functions here
 function date(){
