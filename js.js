@@ -155,7 +155,7 @@ function getMonth(){
   Month[5] = "June";
   Month[6] = "July";
   Month[7] = 'August';
-  Month[8] = 'September'
+  Month[8] = 'September';
   Month[9] = 'October';
   Month[10] = 'November';
   Month[11] = 'December';
