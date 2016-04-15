@@ -1,33 +1,15 @@
-if (annyang) {
+if (annyang){
     var commands = {
-      'hello': function() {
-        $('h1').html("Hello!");
-      },
-      'Hey Jarvis': function(){
-        $('h1').html("Yes Sir?");
-      },
-      'say hi to *name': function(name) {
-        $('h1').html("Hi "+name);
-      },
-      'Say hello to Dad': function(){
-        $('h1').html("Hello Father!");
-      },
+      'hello': function(){$('h1').html("Hello!");},
+      'Hey Jarvis': function(){$('h1').html("Yes Sir?");},
+      'say hi to *name': function(name){$('h1').html("Hi "+name);},
+      'Say hello to Dad': function(){$('h1').html("Hello Father!");},
       'What is the date today': date,
-      'who are you': function(){
-        $('h1').html("I am Jarvis");
-      },
+      'who are you': function(){$('h1').html("I am Jarvis");},
       'What\'s the date today': date,
-      'who made you': function(){
-        $('h1').html("Harry Whitehead");
-      },
-
-      'Say something(I\'m giving up on you)': function(){
-        speak("Sure thing");
-      },
-      'What is love': function(){
-        speak("Baby don't hurt me.... don't hurt me.... no more");
-      },
-
+      'who made you': function(){$('h1').html("Harry Whitehead"); },
+      'Say something(I\'m giving up on you)': function(){speak("Sure thing");},
+      'What is love': function(){speak("Baby don't hurt me.... don't hurt me.... no more");},
       '(What\'s) :num1 + :num2': plus,
       '(What\'s) :num1 to the power of :num2': powerOf,
       '(What\'s) :num1 ^ :num2': powerOf,
@@ -44,17 +26,13 @@ if (annyang) {
       'What month is it': getMonth,
       "Search for *term": searchFor,
       "Search Youtube for *term": searchYoutube,
-      "Tell me a joke", tellJoke
-
+      "Tell me a joke": tellJoke
     };
-
-
-
-
     annyang.addCommands(commands);
     annyang.debug();
     annyang.start();
 }
+//Functions In general
 //Math Functions here
 function plus(num1, num2){
 
@@ -62,7 +40,6 @@ function plus(num1, num2){
         $('h1').html(total);
         console.log(total);
 }
-
 function divedBy(num1, num2){
 
         var total = parseInt(num1) / parseInt(num2);
@@ -94,7 +71,7 @@ function otherRoots(rootNumber, num1){
     $('h1').html(total);
     console.log(total);
 }
-//All web searching functions here
+//All web sending functions here
 function release(){
      window.location.href = "http://vaporz.groklinux.com/index.html";
 }
@@ -105,7 +82,6 @@ function searchWikipedia(term){
   console.log("Showing results for " + term);
   $('h1').html("<iframe width='1000' height='2000'src='https://en.wikipedia.org/w/index.php?search="+term+"'></iframe>");
 }
-
 function searchGoogle(term){
   console.log("Showing results for " + term);
   term = term.split(' ').join('+');
@@ -123,10 +99,9 @@ function searchYoutube(term){
 }
 //I'm not actually sure if this will work the way that I want it to
 function citing(author, link, dateRevised, title){
-  var cited = author+"("+dateRevised+"),"+title+","+link;
+  var cited = author+"("+dateRevised+"),"+title.italics+","+link;
   $('h1').html(cited);
 }
-
 //Date Showing functions here
 function date(){
   var currentDate = new Date();
@@ -169,11 +144,14 @@ function getMonth(){
 }
 //Other Functions here
 function tellJoke(jokeID){
-//Maybe use switch? Don't know syntax
-  if(jokeID === 1){
-    speak("I renamed my ipod titanic, it's syncing now");
-  }
-  if(jokeID === 2){
-    speak("");
+  switch(jokeID){
+    case 1:
+      speak("What's read and bad for your teeth.... a brick");
+      break;
+    case 2:
+      speak("What do you give a sick bird....... Tweetment");
+      break;
+    default:
+      break;
   }
 }
