@@ -1,10 +1,7 @@
 if (annyang) {
-   //Let's define our first command. First the text we expect, and then the function it should call
     var commands = {
       'hello': function() {
         $('h1').html("Hello!");
-
-
       },
       'Hey Jarvis': function(){
         $('h1').html("Yes Sir?");
@@ -46,7 +43,8 @@ if (annyang) {
       'Search Google for *term': searchGoogle,
       'What month is it': getMonth,
       "Search for *term": searchFor,
-      "Search Youtube for *term": searchYoutube
+      "Search Youtube for *term": searchYoutube,
+      "Tell me a joke", tellJoke
 
     };
 
@@ -55,10 +53,9 @@ if (annyang) {
 
     annyang.addCommands(commands);
     annyang.debug();
-    //Get annyang started listening to things recording/inputed by the mic
     annyang.start();
 }
-//Functions here
+//Math Functions here
 function plus(num1, num2){
 
         var total = parseInt(num1) + parseInt(num2);
@@ -111,6 +108,7 @@ function searchWikipedia(term){
 
 function searchGoogle(term){
   console.log("Showing results for " + term);
+  term = term.split(' ').join('+');
   window.location.href='https://google.com/search?q='+term;
 
 }
@@ -120,8 +118,15 @@ function searchFor(term){
 }
 function searchYoutube(term){
   console.log("Showing Youtube results for " + term);
+  term = term.split(' ').join('+');
   window.location.href='https://www.youtube.com/results?search_query='+term;
 }
+//I'm not actually sure if this will work the way that I want it to
+function citing(author, link, dateRevised, title){
+  var cited = author+"("+dateRevised+"),"+title+","+link;
+  $('h1').html(cited);
+}
+
 //Date Showing functions here
 function date(){
   var currentDate = new Date();
@@ -161,4 +166,14 @@ function getMonth(){
   Month[11] = 'December';
   var n = Month[d.getMonth()];
   $('h1').html(n);
+}
+//Other Functions here
+function tellJoke(jokeID){
+//Maybe use switch? Don't know syntax
+  if(jokeID === 1){
+    speak("I renamed my ipod titanic, it's syncing now");
+  }
+  if(jokeID === 2){
+    speak("");
+  }
 }
